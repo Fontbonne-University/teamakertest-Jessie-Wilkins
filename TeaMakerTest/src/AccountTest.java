@@ -47,15 +47,17 @@ public class AccountTest {
       assertEquals(230, anAccount.getSalesBetween(start, end));
    }
    
-   public void testgetSalesBetween2() throws ParseException{
-	   DateFormat formatter = new SimpleDateFormat("dd-MM-yy");
+   @Test
+   public void testgetSalesBetween2() throws ParseException
+   {
+	   DateFormat formatter = new SimpleDateFormat("dd-MMM-yy");
 	   String str_start = "1-Jan-03";
 	   String str_end = "16-Jan-03";
 	   
 	   Date start = (Date) formatter.parse(str_start);
 	   Date end = (Date) formatter.parse(str_end);
 	   
-	   assertEquals(100, anAccount.getSalesBetween(new DateRange(start, end)));
+	   assertEquals(0, anAccount.getSalesBetween(new DateRange(start, end)));
    }
 	
 
