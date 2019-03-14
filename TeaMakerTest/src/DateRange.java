@@ -1,17 +1,27 @@
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
 
-class DateRange {
-    DateRange (Date start, Date end) {
-        _start = start;
-        _end = end;
-    }
-    Date getStart() {
-        return _start;
-    }
-    Date getEnd() {
-        return _end;
-    }
-    private final Date _start;
-    private final Date _end;
+public class DateRange {
+	private Date start;
+	private Date end;
+
+	public DateRange(Date start, Date end) {
+		this.setStart(start);
+		this.setEnd(end);
+	}
+
+	public Date getStart() {
+		return start;
+	}
+
+	public void setStart(Date start) {
+		this.start = start;
+	}
+
+	public Date getEnd() {
+		return end;
+	}
+
+	public void setEnd(Date end) {
+		this.end = end;
+	}
 }
