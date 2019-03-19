@@ -57,7 +57,7 @@ public class AccountTest {
 	   Date start = (Date) formatter.parse(str_start);
 	   Date end = (Date) formatter.parse(str_end);
 	   
-	   assertEquals(0, anAccount.getSalesBetween(new DateRange(start, end)));
+	   assertEquals(100, anAccount.getSalesBetween(new DateRange(start, end)));
    }
    
    @Test
