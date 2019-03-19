@@ -12,6 +12,9 @@ class DateRange {
     Date getEnd() {
         return _end;
     }
-    private final Date _start;
+    boolean includes(Date date) {
+		return date.equals(getStart()) || date.equals(getEnd()) || (date.after(getStart()) && date.before(getEnd()));
+	}
+	private final Date _start;
     private final Date _end;
 }

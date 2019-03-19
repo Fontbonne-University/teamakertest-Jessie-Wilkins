@@ -33,7 +33,7 @@ class Account {
 			Map.Entry m = (Map.Entry) i.next();
 			Date date = (Date) m.getKey();
 			Integer value= (Integer) m.getValue();
-			if(includes(range, date))
+			if(range.includes(date))
 			{
 				SimpleDateFormat dformat = new SimpleDateFormat("dd.MM.yyyy");
 				String formattedDate = dformat.format(date);
@@ -42,9 +42,5 @@ class Account {
 			}
 		}
 		return result;
-	}
-
-	private boolean includes(DateRange range, Date date) {
-		return date.equals(range.getStart()) || date.equals(range.getEnd()) || (date.after(range.getStart()) && date.before(range.getEnd()));
 	}
 }
